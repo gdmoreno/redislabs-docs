@@ -44,7 +44,7 @@ openssl req -new -key <key-file-name>.pem -out <key-file-name>.csr
 ```
 
 {{< note >}}
-You will be prompted for a Country Name, State or Province Name, Locality Name, Organization Name, Organizational Unit and Common Name. You will need to check with your security team or certificate authority for the right values for your organization. The database's fully qualified domain name (FQDN) is typically used as the common name for the certificate.
+You will be prompted for a Country Name, State or Province Name, Locality Name, Organization Name, Organizational Unit and Common Name. You will need to check with your security team or certificate authority for the right values for your organization. The database's fully qualified domain name (FQDN) is typically used as the common name for the certificate. You also need to make sure that the key file does not have a password, otherwise the rladmin commands below will fail.
 {{< /note >}}
 
 **Step 3:** Sign the private key using your certificate authority
